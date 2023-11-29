@@ -19,7 +19,8 @@ const crawler = new PuppeteerCrawler({
     requestHandler: router,
     // Comment this option to scrape the full website.
     //  maxRequestsPerCrawl: 20,
-    preNavigationHooks
+    preNavigationHooks,
+    requestHandlerTimeoutSecs: 3600,
 });
 /* for (let u of urls) {
     console.log('addurl', u)

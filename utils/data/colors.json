@@ -45,7 +45,8 @@
     {
         "searchterm": [
             "zümrüt yeşili",
-            "yeşil"
+            "yeşil",
+            "yesil"
         ],
         "category": "yeşil"
     },
@@ -163,61 +164,90 @@
             "erku"
         ],
         "category": "erku"
-    }
-    ,
+    },
     {
         "searchterm": [
             "saks"
         ],
         "category": "saks"
-    }
-    ,
+    },
     {
         "searchterm": [
             "fusya",
             "fuşya"
         ],
         "category": "fuşya"
-    }
-    ,
+    },
     {
         "searchterm": [
             "taba"
-         
         ],
         "category": "taba"
-    }
-    ,
+    },
     {
         "searchterm": [
             "mavi"
-         
         ],
         "category": "mavi"
-    }
-    ,
+    },
     {
         "searchterm": [
             "lila"
-         
         ],
         "category": "lila"
-    }
-    ,
+    },
     {
         "searchterm": [
             "gri"
-         
         ],
         "category": "gri"
-    }
-
-    ,
+    },
     {
         "searchterm": [
             "haki"
-         
         ],
         "category": "haki"
+    },
+    {
+        "searchterm": [
+            "zümrüt"
+        ],
+        "category": "zümrüt"
+    },
+    {
+        "searchterm": [
+            "ekru"
+        ],
+        "category": "ekru"
+    },
+    {
+        "searchterm": [
+            "somon"
+        ],
+        "category": "somon"
+    },
+    {
+        "searchterm": [
+            "kiremit"
+        ],
+        "category": "kiremit"
+    },
+    {
+        "searchterm": [
+            "füme"
+        ],
+        "category": "füme"
+    },
+    {
+        "searchterm": [
+            "turuncu"
+        ],
+        "category": "turuncu"
+    },
+    {
+        "searchterm": [
+            "gül kurusu"
+        ],
+        "category": "gül kurusu"
     }
 ]
