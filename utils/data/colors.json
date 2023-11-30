@@ -273,6 +273,34 @@
         ],
         "category": "indigo"
     }
+    ,
+    {
+        "searchterm": [
+            "pembe"
+        ],
+        "category": "pembe"
+    }
+    ,
+    {
+        "searchterm": [
+            "turkuaz"
+        ],
+        "category": "turkuaz"
+    }
 
+    ,
+    {
+        "searchterm": [
+            "mercan"
+        ],
+        "category": "mercan"
+    }
+    ,
+    {
+        "searchterm": [
+            "kemik"
+        ],
+        "category": "kemik"
+    }
 ]
 
