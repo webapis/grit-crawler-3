@@ -250,4 +250,29 @@
         ],
         "category": "gül kurusu"
     }
+
+    ,
+    {
+        "searchterm": [
+            "nefti"
+        ],
+        "category": "nefti"
+    }
+
+    ,
+    {
+        "searchterm": [
+            "vişne"
+        ],
+        "category": "vişne"
+    }
+    ,
+    {
+        "searchterm": [
+            "indigo"
+        ],
+        "category": "indigo"
+    }
+
 ]
+
