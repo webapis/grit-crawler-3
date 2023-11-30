@@ -17,6 +17,7 @@ const extractor = async (page) => {
             const size = Array.from(document.querySelectorAll('.eksecenekLine span')).map(m => m.innerText).filter(Number).map(m => parseInt(m))
             const optionColors = ''
             const description = document.querySelector('.teknikDetay') ? document.querySelector('.teknikDetay').innerText.replaceAll('\n', ' ') : ''
+            const sku = document.querySelector('.productcode').childNodes[1].textContent
             return {
 
                 title,
@@ -28,7 +29,8 @@ const extractor = async (page) => {
                 link,
                 timestamp: Date.now(),
                 description,
-                marka: 'abiyesarayi'
+                marka: 'abiyesarayi',
+                sku
             }
         }
         catch (error) {
