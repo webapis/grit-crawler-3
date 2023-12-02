@@ -26,7 +26,7 @@
     },
     {
         "searchterm": [
-            "kırmızı"
+            "kırmızı","kirmizi"
         ],
         "category": "kırmızı"
     },
@@ -52,7 +52,7 @@
     },
     {
         "searchterm": [
-            "saks mavi"
+            "saks mavi","sax"
         ],
         "category": "saks mavi"
     },
@@ -64,7 +64,7 @@
     },
     {
         "searchterm": [
-            "mürdüm"
+            "mürdüm","murdum"
         ],
         "category": "mürdüm"
     },
@@ -82,7 +82,7 @@
     },
     {
         "searchterm": [
-            "gümüş"
+            "gümüş","silver"
         ],
         "category": "gümüş"
     },
@@ -143,7 +143,7 @@
     },
     {
         "searchterm": [
-            "bakır"
+            "bakır","bakir"
         ],
         "category": "bakır"
     },
@@ -246,61 +246,74 @@
     },
     {
         "searchterm": [
-            "gül kurusu"
+            "gül kurusu","gul-kurusu"
         ],
         "category": "gül kurusu"
-    }
-
-    ,
+    },
     {
         "searchterm": [
             "nefti"
         ],
         "category": "nefti"
-    }
-
-    ,
+    },
     {
         "searchterm": [
-            "vişne"
+            "vişne","visne"
         ],
         "category": "vişne"
-    }
-    ,
+    },
     {
         "searchterm": [
             "indigo"
         ],
         "category": "indigo"
-    }
-    ,
+    },
     {
         "searchterm": [
             "pembe"
         ],
         "category": "pembe"
-    }
-    ,
+    },
     {
         "searchterm": [
             "turkuaz"
         ],
         "category": "turkuaz"
-    }
-
-    ,
+    },
     {
         "searchterm": [
             "mercan"
         ],
         "category": "mercan"
-    }
-    ,
+    },
     {
         "searchterm": [
             "kemik"
         ],
         "category": "kemik"
+    },
+    {
+        "searchterm": [
+            "laci"
+        ],
+        "category": "laci"
+    },
+    {
+        "searchterm": [
+            "safran"
+        ],
+        "category": "safran"
+    },
+    {
+        "searchterm": [
+            "ten"
+        ],
+        "category": "ten"
+    },
+    {
+        "searchterm": [
+            "olive"
+        ],
+        "category": "zeytin"
     }
 ]
-

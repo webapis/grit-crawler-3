@@ -1,56 +1,55 @@
-const colors = require('../../utils/data/colors.json')
-const { searchObject } = require('../../utils/searchObject')
+
 
 const extractor = async (page) => {
 
     await page.waitForSelector('.productdetails');
-
+    await page.waitForSelector('.hasImage.active')
+    await page.waitForSelector('[data-val-lang]')
     const data = await page.evaluate(() => {
 
         try {
-         
+
             const link = document.URL
 
-            const price = document.querySelector('.product-price-detail').childNodes.length==2? document.querySelector('.product-price-detail').childNodes[1].textContent.replace('TL','').trim():document.querySelector('.product-price-detail').textContent.replace('TL','').trim()
-            const imageUrl = Array.from(document.querySelectorAll('[data-zoom-image] img')).map(m=>m.src)
+            const price = document.querySelector('.product-price-detail').childNodes.length == 2 ? document.querySelector('.product-price-detail').childNodes[1].textContent.replace('TL', '').trim() : document.querySelector('.product-price-detail').textContent.replace('TL', '').trim()
+            const imageUrl = Array.from(document.querySelectorAll('[data-zoom-image] img')).map(m => m.src)
             const title = document.querySelector('h1').innerText
-            const size = ''
-            const optionColors = ''
-            const description = ''
+            const size = Array.from(document.querySelectorAll('[data-attr=BEDEN]')).map(m => m.innerText).filter(Number).map(m => parseInt(m))
+            const color = document.querySelector('.hasImage.active').getAttribute('data-val-lang')
+            const sku = document.querySelector('h1').innerText.split(' ').reverse()[0]
+            if (price.includes('USD')) {
+                return null
+            }
             return {
-             
-                title,
 
-                optionColors,
+                title,
                 price,
                 size,
                 imageUrl,
                 link,
                 timestamp: Date.now(),
-                description,
+                color,
+                sku,
                 marka: 'alchera'
-            
+
             }
         }
         catch (error) {
-            return { error: error.toString(), content: document.innerHTML }
+            return { error: error.toString(), content: document.innerHTML, url: document.URL }
         }
     })
-    debugger
-    const color = colors.find((f) => searchObject({ link: data.link, title: data.title }, f.searchterm))
-    const withColor = { ...data, color: color ? color.category : 'unknown' }
-    debugger
-    return withColor
+
+    return data
 }
 
 async function getUrls(page) {
     const url = await page.url()
-    const pageExist = await page.$('.count-info-text strong')
+    const pageExist = await page.$('.paging a')
     let pageUrls = []
-    let productCount = 0
+
     if (pageExist) {
-        productCount = await page.$eval('.count-info-text strong', element => parseInt(element.textContent))
-        const totalPages = Math.ceil(productCount / 100)
+
+        const totalPages = await page.evaluate(() => Math.max(...Array.from(document.querySelectorAll('.paging a')).map(m => m.innerText).filter(Number)))
 
         let pagesLeft = totalPages
         for (let i = 2; i <= totalPages; i++) {
@@ -60,7 +59,7 @@ async function getUrls(page) {
         }
     }
 
-    return { pageUrls, productCount, pageLength: pageUrls.length + 1 }
+    return { pageUrls }
 }
 
 module.exports = { extractor, getUrls, prodLinkSelector: '.product-link' }

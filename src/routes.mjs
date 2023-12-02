@@ -14,12 +14,17 @@ router.addDefaultHandler(async ({ enqueueLinks, log, page, request: { userData: 
     debugger
     const prodLinkSelector = require(`./handlers/${marka}`).prodLinkSelector;
     const isAutoScroll = require(`./handlers/${marka}`).isAutoScroll;
+    const clickAndScroll = require(`./handlers/${marka}`).clickAndScroll;
+
     log.info(`enqueueing new URLs`, 'userData', start);
     if (isAutoScroll) {
 
         await autoScroll(page)
     }
 
+    if (clickAndScroll) {
+        await clickAndScroll(page)
+    }
 
     await enqueueLinks({
         selector: prodLinkSelector,
@@ -57,6 +62,8 @@ router.addHandler('detail', async ({ request, page, log, pushData }) => {
     const data = await extractor(page)
 
     log.info(`${title}`, { url: request.loadedUrl });
+    if (data !== null) {
+        await pushData(data);
+    }
 
-    await pushData(data);
 });
