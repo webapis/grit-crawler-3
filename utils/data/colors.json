@@ -249,58 +249,53 @@
             "gül kurusu"
         ],
         "category": "gül kurusu"
-    }
-
-    ,
+    },
     {
         "searchterm": [
             "nefti"
         ],
         "category": "nefti"
-    }
-
-    ,
+    },
     {
         "searchterm": [
             "vişne"
         ],
         "category": "vişne"
-    }
-    ,
+    },
     {
         "searchterm": [
             "indigo"
         ],
         "category": "indigo"
-    }
-    ,
+    },
     {
         "searchterm": [
             "pembe"
         ],
         "category": "pembe"
-    }
-    ,
+    },
     {
         "searchterm": [
             "turkuaz"
         ],
         "category": "turkuaz"
-    }
-
-    ,
+    },
     {
         "searchterm": [
             "mercan"
         ],
         "category": "mercan"
-    }
-    ,
+    },
     {
         "searchterm": [
             "kemik"
         ],
         "category": "kemik"
+    },
+    {
+        "searchterm": [
+            "laci"
+        ],
+        "category": "laci"
     }
 ]
-

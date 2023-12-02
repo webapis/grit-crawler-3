@@ -57,6 +57,8 @@ router.addHandler('detail', async ({ request, page, log, pushData }) => {
     const data = await extractor(page)
 
     log.info(`${title}`, { url: request.loadedUrl });
+    if (data !== null) {
+        await pushData(data);
+    }
 
-    await pushData(data);
 });
